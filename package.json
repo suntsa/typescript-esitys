@@ -7,6 +7,6 @@
     "typescript": "^4.1.5"
   },
   "scripts": {
-    "test": "node -r ts-node/register src/koe.ts"
+    "perusteet": "node -r ts-node/register src/perusteet.ts"
   }
 }
