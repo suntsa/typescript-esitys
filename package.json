@@ -1,0 +1,12 @@
+{
+  "name": "typescript-esitys",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.5"
+  },
+  "scripts": {
+    "test": "node -r ts-node/register src/koe.ts"
+  }
+}
