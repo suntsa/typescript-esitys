@@ -20,7 +20,7 @@ interface Oksentava {
   oksennaKarvapallo: () => Sotku
 }
 
-// Ei laajenna Elain-rajapintaa vaan määrittelee kaikki kentät itse
+// Ei laajenna Elain-rajapintaa vaan määrittelee kaikki sen kentät itse
 interface Kissa extends Oksentava {
   nimi: string
   elämiä: number
@@ -65,7 +65,8 @@ console.log(`Kissa kelpaa lintumetsälle: ${kelpaakoKoiraLintumetsälle(jokuKiss
 const kelpaakoEhkäNoutavaLintumetsälle = (ehkäNoutava: { noutaa: boolean }): boolean => {
   return ehkäNoutava.noutaa
 }
-console.log(`Ehkä noutava koira kelpaa lintumetsälle: ${kelpaakoEhkäNoutavaLintumetsälle(jokuKoira)}`)
+console.log(`Ehkä noutava koira kelpaa lintumetsälle: 
+${kelpaakoEhkäNoutavaLintumetsälle(jokuKoira)}`)
 console.log(`Ehkä noutavat haukka kelpaa lintumetsälle: ${kelpaakoEhkäNoutavaLintumetsälle(jokuHaukka)}`)
 /*
 TS2345: Argument of type 'Kissa' is not assignable to parameter of type '{ noutaa: boolean; }'.
@@ -89,7 +90,7 @@ export const onOksentava = (ehdokas: Object): ehdokas is Oksentava => {
   return 'oksennaKarvapallo' in ehdokas
 }
 
-// Tyyppinä voi olla myös union-tyyppi, joka tarkoittaa "joku näistä tyypeistä"
+// Tässä parametrin tyyppinä union-tyyppi, joka tarkoittaa "joku näistä tyypeistä"
 const tuotaSotkua = (sotkeva: Oksentava | PostinRepivä): Sotku => {
   if (onOksentava(sotkeva)) {
     // Kääntäjä "rajaa" tyypin onOksentava-funktion perusteella
