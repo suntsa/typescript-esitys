@@ -87,6 +87,7 @@ console.log(kutsuhuutoElaimelle(jokuKissa))
 const onOksentava = (ehdokas: Object): ehdokas is Oksentava => {
   // in-tarkastelu on puhtaasti ajonaikaista joten tässä 'oksennaKarvapallo' ei liity mitenkään
   // Oksentava-tyypin samannimiseen kenttään
+  // TODO: tämän voisi kuulemma tehdä tyyppiturvallisemminkin
   return 'oksennaKarvapallo' in ehdokas
 }
 
