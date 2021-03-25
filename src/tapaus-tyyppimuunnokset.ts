@@ -70,7 +70,7 @@ const muunna_mittalaite_mittalaitemalli = <AZ> (a: { mittalaite: Mittalaite } & 
   }
 }
 /**
- * Muuntaa kentän nimen ja tyypin.
+ * Muuntaa kentän nimen.
  * Sisään: { id: number } & AZ
  * Ulos:   { raportointiId: number } & AZ
  */
