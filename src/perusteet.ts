@@ -84,7 +84,7 @@ const kutsuhuutoElaimelle = (elain: Eläin): string => {
 console.log(kutsuhuutoNimetylle(jokuKissa))
 console.log(kutsuhuutoElaimelle(jokuKissa))
 
-export const onOksentava = (ehdokas: Object): ehdokas is Oksentava => {
+const onOksentava = (ehdokas: Object): ehdokas is Oksentava => {
   // in-tarkastelu on puhtaasti ajonaikaista joten tässä 'oksennaKarvapallo' ei liity mitenkään
   // Oksentava-tyypin samannimiseen kenttään
   return 'oksennaKarvapallo' in ehdokas
